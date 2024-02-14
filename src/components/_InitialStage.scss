@@ -1,0 +1,19 @@
+.initial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .paper_box {
+        margin-top: -180px;
+        margin-left: -250px;
+    }
+
+    .rock_box {
+        margin-top: -180px;
+        margin-left: 250px;
+    }
+
+    .scissors_box {
+        margin-top: 180px;
+    }
+}

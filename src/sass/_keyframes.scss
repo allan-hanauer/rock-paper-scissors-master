@@ -1,0 +1,20 @@
+@keyframes res_top {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes res_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+}
+
+@keyframes res_right {
+    0% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+}

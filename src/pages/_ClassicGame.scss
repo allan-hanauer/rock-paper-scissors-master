@@ -1,0 +1,21 @@
+@import "../sass/colors";
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 500px;
+}
+
+.line-game {
+    position: absolute;
+    margin-top: 90px;
+}
+
+@media only screen and (max-width:768px) {
+    .game {
+        margin-top: -40px;
+        transform: scale(0.65);
+    }
+}

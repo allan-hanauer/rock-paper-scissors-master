@@ -1,0 +1,57 @@
+@import"../sass/colors";
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+    color: $clr-text-1;
+    text-align: center;
+
+    .rules {
+        margin-right: 30px;
+        margin-bottom: 12px;
+        display: flex;
+        width: 130px;
+        height: 42px;
+        color: $clr-text-1;
+        font-size: 1rem;
+        background: none;
+        border: 2px solid $clr-text-1;
+        border-radius: 8px;
+        align-items: center;
+        letter-spacing: 3px;
+        justify-content: center;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .rules:hover {
+        background: $clr-text-1;
+        color: $clr-text-2;
+        border-color: $clr-text-3;
+    }
+
+    p {
+        align-self: center;
+
+        a {
+            color: hsl(180, 91%, 39%);
+            text-decoration: none;
+
+        }
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    footer {
+        .rules {
+            align-self: center;
+            margin: 0;
+            margin-bottom: 55px;
+            letter-spacing: 2.5px;
+            padding-left: 2px;
+        }
+    }
+}

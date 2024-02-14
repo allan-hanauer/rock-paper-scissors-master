@@ -1,0 +1,30 @@
+.picked {
+    display: flex;
+    gap: 250px;
+    height: 400px;
+    color: $clr-text-1;
+
+    .user {
+        .box_game {
+            margin-left: -40px;
+            margin-top: 50px;
+            animation: res_left 2s ease-in-out;
+        }
+    }
+
+    .waiting {
+        position: absolute;
+        margin-top: 50px;
+        width: 200px;
+        height: 205px;
+        border-radius: 50%;
+        background-color: hsla(0, 0%, 0%, 0.2);
+    }
+
+    .home {
+        .box_game {
+            margin-top: 50px;
+            animation: res_right 2s ease-in-out;
+        }
+    }
+}
