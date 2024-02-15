@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import InitialStage from "../components/InitialStage";
 import PickedStage from "../components/PickedStage";
 import FinalStage from "../components/FinalStage";
@@ -9,7 +9,6 @@ interface classicGameProps {
 
 const ClassicGame: React.FC<classicGameProps> = ({ score, setScore }) => {
   const gameStage = ["select", "picked", "final"];
-  const [message, setMessage] = useState("");
   const [gameState, setGameState] = useState(gameStage[0]);
   const [user, setUser] = useState("");
   const [win, setWin] = useState(-1);
@@ -34,7 +33,6 @@ const ClassicGame: React.FC<classicGameProps> = ({ score, setScore }) => {
           gameStage={gameStage}
           setGameState={setGameState}
           setWin={setWin}
-          win={win}
           setHome={setHome}
           home={home}
         />
