@@ -4,7 +4,7 @@ import { useState } from "react";
 import ClassicGame from "./pages/ClassicGame";
 
 const App = () => {
-  const [score, setScore] = useState(12);
+  const [score, setScore] = useState(0);
   return (
     <>
       <Header score={score} />

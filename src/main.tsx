@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./sass/styles.css";
 //COMPONENTS
 import ErrorPage from "./pages/ErrorPage.tsx";
-import BonusGame from "./pages/BonusGame.tsx";
 
 //Variables to main element
 const router = createBrowserRouter([
