@@ -332,6 +332,24 @@ header .score_box .points {
   background-color: hsl(39, 87%, 43%);
 }
 
+@keyframes res_top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes res_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
+@keyframes res_right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
 .picked {
   display: flex;
   gap: 250px;
@@ -339,8 +357,9 @@ header .score_box .points {
   color: hsl(214, 0%, 100%);
 }
 .picked .user .box_game {
-  margin-left: -40px;
-  margin-top: 50px;
+  transform: scale(1.5);
+  margin-left: -50px;
+  margin-top: 100px;
   animation: res_left 2s ease-in-out;
 }
 .picked .waiting {
@@ -352,10 +371,42 @@ header .score_box .points {
   background-color: hsla(0, 0%, 0%, 0.2);
 }
 .picked .home .box_game {
-  margin-top: 50px;
+  transform: scale(1.5);
+  margin-top: 100px;
+  margin-left: 20px;
   animation: res_right 2s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .picked {
+    display: flex;
+    gap: 100px;
+    height: 400px;
+    color: hsl(214, 0%, 100%);
+    padding-top: 300px;
+  }
+  .picked .user .box_game {
+    transform: scale(1);
+    margin-left: -10px;
+    margin-top: -250px;
+    animation: res_left 2s ease-in-out;
+  }
+  .picked .waiting {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: -10px;
+    width: 200px;
+    height: 205px;
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 0%, 0.2);
+  }
+  .picked .home .box_game {
+    transform: scale(1);
+    margin-top: -250px;
+    margin-left: -10px;
+    animation: res_right 2s ease-in-out;
+  }
+}
 .initial {
   display: flex;
   justify-content: center;
@@ -373,6 +424,130 @@ header .score_box .points {
   margin-top: 180px;
 }
 
+@keyframes res_top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+@keyframes res_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
+@keyframes res_right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+.final {
+  display: flex;
+  padding: none;
+  width: 100%;
+  height: 400px;
+  color: hsl(214, 0%, 100%);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.final div.selection-final {
+  display: flex;
+  justify-content: center;
+}
+.final div.selection-final h3 {
+  font-size: 2rem;
+}
+.final .end-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.final .end-game button {
+  display: flex;
+  width: 130px;
+  height: 42px;
+  color: hsl(214, 0%, 100%);
+  font-size: 1rem;
+  background: none;
+  border: 2px solid hsl(214, 0%, 100%);
+  border-radius: 8px;
+  align-items: center;
+  letter-spacing: 3px;
+  justify-content: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.final .end-game button:hover {
+  background: hsl(214, 0%, 100%);
+  color: hsl(229, 25%, 31%);
+  border-color: hsl(229, 64%, 46%);
+}
+.final .picked-card {
+  display: flex;
+  width: 100%;
+  gap: 350px;
+  flex-direction: row;
+  margin-left: 40px;
+  padding-right: 40px;
+}
+.final .picked-card .user {
+  text-wrap: nowrap;
+}
+.final .picked-card .user .box_game {
+  transform: scale(1.5);
+  margin-left: -50px;
+  margin-top: 100px;
+  animation: res_left 2s ease-in-out;
+}
+.final .picked-card .waiting {
+  position: absolute;
+  margin-top: 50px;
+  width: 200px;
+  height: 205px;
+  border-radius: 50%;
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+.final .picked-card .home {
+  text-wrap: nowrap;
+}
+.final .picked-card .home .box_game {
+  transform: scale(1.5);
+  margin-top: 100px;
+  margin-left: 20px;
+  animation: res_right 2s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .final {
+    display: flex;
+    gap: 100px;
+    height: 400px;
+    color: hsl(214, 0%, 100%);
+    padding-top: none;
+  }
+  .final .user .box_game {
+    transform: scale(1);
+    margin-left: -10px;
+    margin-top: -250px;
+    animation: res_left 2s ease-in-out;
+  }
+  .final .waiting {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: -10px;
+    width: 200px;
+    height: 205px;
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 0%, 0.2);
+  }
+  .final .home .box_game {
+    transform: scale(1);
+    margin-top: -250px;
+    margin-left: -10px;
+    animation: res_right 2s ease-in-out;
+  }
+}
 * {
   margin: 0;
   padding: 0;

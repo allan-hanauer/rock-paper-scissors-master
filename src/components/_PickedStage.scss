@@ -1,3 +1,5 @@
+@import "../sass/keyframes";
+
 .picked {
     display: flex;
     gap: 250px;
@@ -5,9 +7,11 @@
     color: $clr-text-1;
 
     .user {
+
         .box_game {
-            margin-left: -40px;
-            margin-top: 50px;
+            transform: scale(1.5);
+            margin-left: -50px;
+            margin-top: 100px;
             animation: res_left 2s ease-in-out;
         }
     }
@@ -23,8 +27,50 @@
 
     .home {
         .box_game {
-            margin-top: 50px;
+            transform: scale(1.5);
+            margin-top: 100px;
+            margin-left: 20px;
             animation: res_right 2s ease-in-out;
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .picked {
+        display: flex;
+        gap: 100px;
+        height: 400px;
+        color: $clr-text-1;
+
+        padding-top: 300px;
+
+        .user {
+
+            .box_game {
+                transform: scale(1);
+                margin-left: -10px;
+                margin-top: -250px;
+                animation: res_left 2s ease-in-out;
+            }
+        }
+
+        .waiting {
+            position: absolute;
+            margin-top: -250px;
+            margin-left: -10px;
+            width: 200px;
+            height: 205px;
+            border-radius: 50%;
+            background-color: hsla(0, 0%, 0%, 0.2);
+        }
+
+        .home {
+            .box_game {
+                transform: scale(1);
+                margin-top: -250px;
+                margin-left: -10px;
+                animation: res_right 2s ease-in-out;
+            }
         }
     }
 }

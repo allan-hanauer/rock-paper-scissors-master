@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InitialStage from "../components/InitialStage";
 import PickedStage from "../components/PickedStage";
+import FinalStage from "../components/FinalStage";
+interface classicGameProps {
+  score: number;
+  setScore: React.Dispatch<React.SetStateAction<number>>;
+}
 
-const ClassicGame = () => {
+const ClassicGame: React.FC<classicGameProps> = ({ score, setScore }) => {
   const gameStage = ["select", "picked", "final"];
+  const [message, setMessage] = useState("");
   const [gameState, setGameState] = useState(gameStage[0]);
   const [user, setUser] = useState("");
   const [win, setWin] = useState(-1);
+  const [home, setHome] = useState("");
   console.log(user);
   if (gameState === gameStage[0]) {
     return (
@@ -19,7 +26,7 @@ const ClassicGame = () => {
       </>
     );
   }
-  if (gameState === gameStage[1] && win === -1) {
+  if (gameState === gameStage[1]) {
     return (
       <>
         <PickedStage
@@ -28,9 +35,71 @@ const ClassicGame = () => {
           setGameState={setGameState}
           setWin={setWin}
           win={win}
+          setHome={setHome}
+          home={home}
         />
       </>
     );
+  }
+  if (gameState === gameStage[2]) {
+    console.log(win, "resultado");
+    if (win === 0) {
+      return (
+        <>
+          <FinalStage
+            win={win}
+            user={user}
+            home={home}
+            setScore={setScore}
+            score={score}
+            setHome={setHome}
+            setUser={setUser}
+            setGameState={setGameState}
+            gameStage={gameStage}
+            message={"DRAW!"}
+            setWin={setWin}
+          />
+        </>
+      );
+    }
+    if (win === 1) {
+      return (
+        <>
+          <FinalStage
+            win={win}
+            user={user}
+            home={home}
+            setScore={setScore}
+            score={score}
+            setHome={setHome}
+            setUser={setUser}
+            setGameState={setGameState}
+            gameStage={gameStage}
+            message={"WIN!"}
+            setWin={setWin}
+          />
+        </>
+      );
+    }
+    if (win === 2) {
+      return (
+        <>
+          <FinalStage
+            win={win}
+            user={user}
+            home={home}
+            setScore={setScore}
+            score={score}
+            setHome={setHome}
+            setUser={setUser}
+            setGameState={setGameState}
+            gameStage={gameStage}
+            message={"LOSE!"}
+            setWin={setWin}
+          />
+        </>
+      );
+    }
   }
 };
 
