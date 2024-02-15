@@ -382,11 +382,12 @@ header .score_box .points {
     gap: 100px;
     height: 400px;
     color: hsl(214, 0%, 100%);
+    text-wrap: nowrap;
     padding-top: 300px;
   }
   .picked .user .box_game {
     transform: scale(1);
-    margin-left: -10px;
+    margin-left: -40px;
     margin-top: -250px;
     animation: res_left 2s ease-in-out;
   }
@@ -525,13 +526,14 @@ header .score_box .points {
     color: hsl(214, 0%, 100%);
     padding-top: none;
   }
-  .final .user .box_game {
+  .final .picked-card {
+    gap: 100px;
+  }
+  .final .picked-card .user .box_game {
     transform: scale(1);
-    margin-left: -10px;
-    margin-top: -250px;
     animation: res_left 2s ease-in-out;
   }
-  .final .waiting {
+  .final .picked-card .waiting {
     position: absolute;
     margin-top: -250px;
     margin-left: -10px;
@@ -540,10 +542,9 @@ header .score_box .points {
     border-radius: 50%;
     background-color: hsla(0, 0%, 0%, 0.2);
   }
-  .final .home .box_game {
+  .final .picked-card .home .box_game {
     transform: scale(1);
-    margin-top: -250px;
-    margin-left: -10px;
+    margin-left: 35px;
     animation: res_right 2s ease-in-out;
   }
 }

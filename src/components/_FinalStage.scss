@@ -97,33 +97,34 @@
 
         padding-top: none;
 
+        .picked-card {
+            gap: 100px;
 
-        .user {
+            .user {
 
-            .box_game {
-                transform: scale(1);
-                margin-left: -10px;
-                margin-top: -250px;
-                animation: res_left 2s ease-in-out;
+                .box_game {
+                    transform: scale(1);
+                    animation: res_left 2s ease-in-out;
+                }
             }
-        }
 
-        .waiting {
-            position: absolute;
-            margin-top: -250px;
-            margin-left: -10px;
-            width: 200px;
-            height: 205px;
-            border-radius: 50%;
-            background-color: hsla(0, 0%, 0%, 0.2);
-        }
 
-        .home {
-            .box_game {
-                transform: scale(1);
+            .waiting {
+                position: absolute;
                 margin-top: -250px;
                 margin-left: -10px;
-                animation: res_right 2s ease-in-out;
+                width: 200px;
+                height: 205px;
+                border-radius: 50%;
+                background-color: hsla(0, 0%, 0%, 0.2);
+            }
+
+            .home {
+                .box_game {
+                    transform: scale(1);
+                    margin-left: 35px;
+                    animation: res_right 2s ease-in-out;
+                }
             }
         }
     }
