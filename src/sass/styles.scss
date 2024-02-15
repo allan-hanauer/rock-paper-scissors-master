@@ -38,6 +38,14 @@ body,
     align-items: center;
     background: radial-gradient($BG-RADIAL) no-repeat;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
+    min-height: 350px;
+}
+
+@media only screen and (max-widht:768px) {
+
+    body,
+    #root {
+        overflow: none;
+    }
 }

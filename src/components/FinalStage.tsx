@@ -26,8 +26,6 @@ const FinalStage: React.FC<finalStageProps> = ({
   win,
   user,
 }) => {
-  console.log(home + " final stage home escolha");
-  console.log(message);
   const endGameChange = () => {
     setGameState(gameStage[0]);
     setHome("");

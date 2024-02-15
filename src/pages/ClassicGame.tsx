@@ -13,7 +13,6 @@ const ClassicGame: React.FC<classicGameProps> = ({ score, setScore }) => {
   const [user, setUser] = useState("");
   const [win, setWin] = useState(-1);
   const [home, setHome] = useState("");
-  console.log(user);
   if (gameState === gameStage[0]) {
     return (
       <>
@@ -40,7 +39,6 @@ const ClassicGame: React.FC<classicGameProps> = ({ score, setScore }) => {
     );
   }
   if (gameState === gameStage[2]) {
-    console.log(win, "resultado");
     if (win === 0) {
       return (
         <>
