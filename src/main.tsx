@@ -15,6 +15,10 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "/rock-paper-scissors-master",
+        element: <App />,
+      },
+      {
         path: "/bonusgame",
         element: <BonusGame />,
       },
