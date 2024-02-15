@@ -10,7 +10,7 @@ import BonusGame from "./pages/BonusGame.tsx";
 //Variables to main element
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/rock-paper-scissors-master",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
