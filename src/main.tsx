@@ -13,16 +13,6 @@ const router = createBrowserRouter([
     path: "/rock-paper-scissors-master",
     element: <App />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/rock-paper-scissors-master",
-        element: <App />,
-      },
-      {
-        path: "/bonusgame",
-        element: <BonusGame />,
-      },
-    ],
   },
 ]);
 
